@@ -1837,6 +1837,8 @@ supported_targets! {
     ("sparc64-unknown-netbsd", sparc64_unknown_netbsd),
     ("x86_64-unknown-netbsd", x86_64_unknown_netbsd),
 
+    ("i686-unknown-nocturne", i686_unknown_nocturne),
+
     ("i686-unknown-haiku", i686_unknown_haiku),
     ("x86_64-unknown-haiku", x86_64_unknown_haiku),
 

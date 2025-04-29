@@ -256,6 +256,9 @@
 //@ revisions: i686_unknown_openbsd
 //@ [i686_unknown_openbsd] compile-flags: --target i686-unknown-openbsd
 //@ [i686_unknown_openbsd] needs-llvm-components: x86
+//@ revisions: i686_unknown_nocturne
+//@ [i686_unknown_nocturne] compile-flags: --target i686-unknown-nocturne
+//@ [i686_unknown_noctune] needs-llvm-components: x86
 //@ revisions: i686_wrs_vxworks
 //@ [i686_wrs_vxworks] compile-flags: --target i686-wrs-vxworks
 //@ [i686_wrs_vxworks] needs-llvm-components: x86

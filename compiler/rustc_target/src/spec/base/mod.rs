@@ -22,6 +22,7 @@ pub(crate) mod linux_wasm;
 pub(crate) mod lynxos178;
 pub(crate) mod msvc;
 pub(crate) mod netbsd;
+pub(crate) mod nocturne;
 pub(crate) mod nto_qnx;
 pub(crate) mod openbsd;
 pub(crate) mod redox;

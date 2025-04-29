@@ -1,0 +1,9 @@
+profile = "compiler"
+change-id = 125535
+
+[build]
+host = ["x86_64-unknown-linux-gnu"]
+target = ["x86_64-unknown-linux-gnu", "i686-unknown-nocturne"]
+
+[rust]
+incremental = true

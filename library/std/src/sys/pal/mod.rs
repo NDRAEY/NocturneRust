@@ -64,6 +64,9 @@ cfg_if::cfg_if! {
     } else if #[cfg(target_os = "zkvm")] {
         mod zkvm;
         pub use self::zkvm::*;
+    } else if #[cfg(target_os = "nocturne")] {
+        mod nocturne;
+        pub use self::nocturne::*;
     } else {
         mod unsupported;
         pub use self::unsupported::*;

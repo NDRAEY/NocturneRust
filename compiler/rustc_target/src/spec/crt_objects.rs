@@ -122,3 +122,12 @@ pub(super) fn pre_wasi_self_contained() -> CrtObjects {
 pub(super) fn post_wasi_self_contained() -> CrtObjects {
     new(&[])
 }
+
+pub(super) fn pre_nocturne() -> CrtObjects {
+    all("/usr/local/nocturneos/lib/libNocturneC.a")
+}
+
+pub(super) fn post_nocturne() -> CrtObjects {
+    new(&[])
+}
+

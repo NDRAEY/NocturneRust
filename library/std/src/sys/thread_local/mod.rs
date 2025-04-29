@@ -29,6 +29,7 @@ cfg_if::cfg_if! {
         target_os = "uefi",
         target_os = "zkvm",
         target_os = "trusty",
+        target_os = "nocturne",
     ))] {
         mod no_threads;
         pub use no_threads::{EagerStorage, LazyStorage, thread_local_inner};
@@ -91,6 +92,7 @@ pub(crate) mod guard {
                 all(target_os = "wasi", target_env = "p1", target_feature = "atomics")
             )),
             target_os = "uefi",
+            target_os = "nocturne",
             target_os = "zkvm",
             target_os = "trusty",
         ))] {

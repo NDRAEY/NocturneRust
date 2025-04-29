@@ -66,6 +66,9 @@ cfg_if::cfg_if! {
     } else if #[cfg(target_os = "uefi")] {
         mod uefi;
         pub use uefi::fill_bytes;
+    } else if #[cfg(target_os = "nocturne")] {
+        mod nocturne;
+        pub use nocturne::fill_bytes;
     } else if #[cfg(target_os = "vxworks")] {
         mod vxworks;
         pub use vxworks::fill_bytes;
