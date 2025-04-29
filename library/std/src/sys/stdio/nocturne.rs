@@ -1,5 +1,6 @@
-use crate::arch::asm;
 use crate::io::{self, BorrowedCursor, IoSliceMut};
+
+use crate::sys::syscalls;
 
 pub struct Stdin;
 pub struct Stdout;
@@ -78,7 +79,7 @@ impl io::Write for Stdout {
     #[inline]
     fn write_all(&mut self, buf: &[u8]) -> io::Result<()> {
         unsafe {
-            asm!("int 0x80", in("eax") 3, in ("ebx") (buf.as_ptr()).addr());
+            syscalls::syscall(3, buf.as_ptr().addr() as u32, 0, 0);
         };
         Ok(())
    }
@@ -93,7 +94,7 @@ impl io::Write for Stdout {
     #[inline]
     fn write(&mut self, buf: &[u8]) -> io::Result<usize> {
         unsafe {
-            asm!("int 0x80", in("eax") 3, in ("ebx") (buf.as_ptr()).addr());
+            syscalls::syscall(3, buf.as_ptr().addr() as u32, 0, 0);
         };
         Ok(buf.len())
     }
