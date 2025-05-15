@@ -34,7 +34,6 @@ pub struct Finder {
 // Targets can be removed from this list once they are present in the stage0 compiler (usually by updating the beta compiler of the bootstrap).
 const STAGE0_MISSING_TARGETS: &[&str] = &[
     // just a dummy comment so the list doesn't get onelined
-    "x86_64-lynx-lynxos178",
     "i686-unknown-nocturne"
 ];
 
@@ -119,8 +118,8 @@ pub fn check(build: &mut Build) {
                     eprintln!(
                         "\nYour system's libstdc++ version is too old for the `llvm.download-ci-llvm` option."
                     );
-                    eprintln!("Current version detected: '{}'", version);
-                    eprintln!("Minimum required version: '{}'", LIBSTDCXX_MIN_VERSION_THRESHOLD);
+                    eprintln!("Current version detected: '{version}'");
+                    eprintln!("Minimum required version: '{LIBSTDCXX_MIN_VERSION_THRESHOLD}'");
                     eprintln!(
                         "Consider upgrading libstdc++ or disabling the `llvm.download-ci-llvm` option."
                     );
